@@ -1,0 +1,33 @@
+<h1>Listing cash_flows</h1>
+
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Amount</th>
+    <th>Description</th>
+    <th>Category</th>
+    <th>Account</th>
+    <th>Deleted</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @cash_flows.each do |cash_flow| %>
+  <tr>
+    <td><%= cash_flow.date %></td>
+    <td><%= cash_flow.amount %></td>
+    <td><%= cash_flow.description %></td>
+    <td><%= cash_flow.category_id %></td>
+    <td><%= cash_flow.account_id %></td>
+    <td><%= cash_flow.deleted %></td>
+    <td><%= link_to 'Show', cash_flow %></td>
+    <td><%= link_to 'Edit', edit_cash_flow_path(cash_flow) %></td>
+    <td><%= link_to 'Destroy', cash_flow, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Cash flow', new_cash_flow_path %>

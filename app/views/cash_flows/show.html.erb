@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Date:</b>
+  <%= @cash_flow.date %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%= @cash_flow.amount %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @cash_flow.description %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @cash_flow.category_id %>
+</p>
+
+<p>
+  <b>Account:</b>
+  <%= @cash_flow.account_id %>
+</p>
+
+<p>
+  <b>Deleted:</b>
+  <%= @cash_flow.deleted %>
+</p>
+
+
+<%= link_to 'Edit', edit_cash_flow_path(@cash_flow) %> |
+<%= link_to 'Back', cash_flows_path %>

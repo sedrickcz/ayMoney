@@ -1,0 +1,9 @@
+<tr>
+  <td><%= l(cash_flow.date, format: "%d.%m.%Y") %></td>
+  <td><%= number_to_currency(cash_flow.amount, precision: 2)%></td>
+  <td><%= cash_flow.account %></td>
+  <td><%= cash_flow.category %></td>
+  <td><%= link_to 'Show', cash_flow %></td>
+  <td><%= link_to 'Edit', edit_cash_flow_path(cash_flow) %></td>
+  <td><%= link_to 'Destroy', cash_flow, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>
