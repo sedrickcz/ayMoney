@@ -37,6 +37,7 @@ group :test do
   #gem 'cucumber-rails', '>= 1.3.0', :require => false
   #gem 'capybara'
   gem "guard-rspec"
+  gem 'rb-fsevent', '~> 0.9'
   gem "capybara"
 end
 

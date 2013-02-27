@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-div#left_container {
+div#content {
   float: left;
   min-width: 80%;
   min-height: 800px;
@@ -12,19 +12,3 @@ div#left_container {
   }
 }
 
-div#right_container {
-  min-width: 20%;
-
-  select#cash_flow_date_1i {
-    width:65px;
-  }
-  select#cash_flow_date_2i {
-    width:100px;
-  }
-  select#cash_flow_date_3i {
-    width:50px;
-  }
-  textarea#cash_flow_description {
-    height: 50px;
-  }
-}
