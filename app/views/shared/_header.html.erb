@@ -1,4 +1,13 @@
 <header>
-  Today is: <%= l(Time.now, format: "%A, %d.%B %Y %H:%M") %> |
-  Your actual balance is: $5000
+  <span>
+    Hello <%= username %> | Today is: <%= l(Time.now, format: "%A, %d.%B %Y %H:%M") %> | Your actual balance is: $5000
+  </span>
+  <span>
+    <% if flash[:notice] %>
+      <p class="notice"><%= flash[:notice] %></p>
+    <% end %>
+    <% if flash[:error] %>
+      <p class="error"><%= flash[:error] %></p>
+    <% end %>
+  </span>
 </header>

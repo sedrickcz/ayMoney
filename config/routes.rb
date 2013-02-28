@@ -4,6 +4,9 @@ AyMoney::Application.routes.draw do
   resources :accounts
   resources :categories
   resources :cash_flows
+  resources :settings do
+    post :update_all, on: :collection
+  end
 
 
   # The priority is based upon order of creation:

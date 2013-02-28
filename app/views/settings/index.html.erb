@@ -1,0 +1,21 @@
+<h1>Settings</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Value</th>
+  </tr>
+<%= form_tag update_all_settings_path do %>
+  <% @settings.each do |setting| %>
+    <tr>
+      <td><%= setting.name %></td>
+      <td><%= generate_field_tag setting%></td>
+    </tr>
+  <% end %>
+  <tr>
+    <td><%= submit_tag 'Update Settings'%></td>
+  </tr>
+<% end -%>
+</table>
+
+<br />

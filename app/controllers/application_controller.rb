@@ -8,5 +8,6 @@ class ApplicationController < ActionController::Base
     @cash_flows = CashFlow.order(:date).limit(10)
     @accounts = Account.order(:title)
     @categories = Category.order(:title)
+    @settings = Setting.all
   end
 end

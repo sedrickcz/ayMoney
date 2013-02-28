@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+#Create default settings
+Setting.create([{name: "name"}, {name: "currency", input_type: 'select', input_options: "czk|eur|gbp|usd"}])
