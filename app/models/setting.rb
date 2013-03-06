@@ -27,10 +27,20 @@ class Setting < ActiveRecord::Base
       name
     end
 
+    def currency_value
+      currency = self.get_currency
+      currency = 'usd' if currency.blank?
+      currency
+    end
+
     protected
 
     def get_name
       select { |s| s.name == 'name'}.first.try(:value)
+    end
+
+    def get_currency
+      select { |s| s.name == 'currency'}.first.try(:value)
     end
 
   end

@@ -52,4 +52,13 @@ FactoryGirl.define do
     description "Lorem ipsum sit magna occaecat consequat ut aliqua."
     deleted false
   end
+
+  factory :cash_flow_valid, class: CashFlow do
+    date Date.current
+    amount 500
+    category_id 1
+    account_id 1
+    description "Lorem ipsum sit magna occaecat consequat ut aliqua."
+    deleted false
+  end
 end

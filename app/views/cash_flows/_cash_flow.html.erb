@@ -1,6 +1,6 @@
 <tr>
   <td><%= l(cash_flow.date, format: "%d.%m.%Y") %></td>
-  <td><%= number_to_currency(cash_flow.amount, precision: 2)%></td>
+  <td><%= get_amount_in_format(cash_flow.amount)%></td>
   <td><%= cash_flow.account %></td>
   <td><%= cash_flow.category %></td>
   <td><%= link_to 'Show', cash_flow %></td>

@@ -1,2 +1,6 @@
 <%= render 'cash_flows/cash_flows'%>
 
+<% @accounts.each do |account| %>
+  <%= account.title%>: <%= get_amount_in_format account.total_sum%><br />
+<% end -%>
+

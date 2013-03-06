@@ -31,4 +31,13 @@ describe CashFlow do
     cf.should_not be_valid
   end
 
+  it "actual balance should return number" do 
+    FactoryGirl.create(:cash_flow_valid)
+    FactoryGirl.create(:cash_flow_valid)
+    
+    CashFlow.actual_balance.should eq(1000)
+  end
+
+
+
 end

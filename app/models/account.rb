@@ -5,6 +5,10 @@ class Account < ActiveRecord::Base
 
   has_many :cash_flows
 
+  def total_sum
+    cash_flows.sum(:amount)
+  end
+
   def to_s
     title
   end

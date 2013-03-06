@@ -7,5 +7,10 @@ class CashFlow < ActiveRecord::Base
   belongs_to :category
   belongs_to :account
 
+ class << self
+  def actual_balance
+    sum(:amount)
+  end
 
+end
 end

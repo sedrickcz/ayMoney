@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   def init
     @cash_flow = CashFlow.new
-    @cash_flows = CashFlow.order(:date).limit(10)
+    @cash_flows = CashFlow.order(:date)
     @accounts = Account.order(:title)
     @categories = Category.order(:title)
     @settings = Setting.all

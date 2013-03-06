@@ -39,4 +39,28 @@ describe Setting do
     Setting.username.should eq('Mr. Nobody')
   end
 
+  it "currency_value should be czk" do
+    setting = Setting.find_by_name('currency')
+    setting.value = "czk"
+    setting.save!
+  
+    Setting.currency_value.should eq('czk')
+  end
+
+  it "currency_value should be usd if value is nil" do
+    setting = Setting.find_by_name('currency')
+    setting.value = nil
+    setting.save!
+  
+    Setting.currency_value.should eq('usd')
+  end
+
+  it "currency_value should be usd if value is blank" do
+    setting = Setting.find_by_name('currency')
+    setting.value = ""
+    setting.save!
+  
+    Setting.currency_value.should eq('usd')
+  end
+
 end

@@ -1,6 +1,6 @@
 <header>
   <span>
-    Hello <%= username %> | Today is: <%= l(Time.now, format: "%A, %d.%B %Y %H:%M") %> | Your actual balance is: $5000
+    Hello <%= username %> | Today is: <%= l(Time.now, format: "%A, %d.%B %Y %H:%M") %> | Your actual balance is: <%= get_actual_balance%>
   </span>
   <span>
     <% if flash[:notice] %>
