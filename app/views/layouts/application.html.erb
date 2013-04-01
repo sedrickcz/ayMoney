@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="aymoneyApp">
 <head>
   <title>AyMoney</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
@@ -8,13 +8,12 @@
 </head>
 <body>
   <%= render 'shared/header' %>
+    <div id="container">
+      <%= yield %>
+    </div>
 
-  <div id="content">
-    <%= yield %>
-  </div>
+    <%= render 'shared/aside' %> 
 
-  <%= render 'shared/aside' %> 
-
-  <%= render 'shared/footer' %>
+    <%= render 'shared/footer' %>
 </body>
 </html>

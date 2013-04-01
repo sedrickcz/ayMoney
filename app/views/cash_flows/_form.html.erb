@@ -1,8 +1,9 @@
 <%= simple_form_for @cash_flow do |f| %>
-  <%= f.input :date, order: [:day, :month, :year] %>
-  <%= f.input :amount%>
-  <%= f.input :account_id, collection: @accounts%>
-  <%= f.input :category_id, collection: @categories%>
-  <%= f.input :description%>
+  <%= f.input :date, order: [:day, :month, :year], input_html: {'ng-model' => "newEntry.date"} %>
+  <%= f.input :amount, input_html: {'ng-model' => "newEntry.amount"}%>
+  <%= f.input :account_id, collection: @accounts, input_html: {'ng-model' => "newEntry.account"}%>
+  <%= f.input :category_id, collection: @categories, input_html: {'ng-model' => "newEntry.category"}%>
+  <%= f.input :description, input_html: {'ng-model' => "newEntry.description"}%>
   <%= f.submit 'Add Amount', class: 'btn btn-primary'%>
 <% end -%>
+
